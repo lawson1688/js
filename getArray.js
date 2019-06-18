@@ -1,5 +1,6 @@
 //getArray.js
 var entries = [];
-console.log(entries.length);
 entries = ['Apple','Apricot','Orange','Pear'];
 console.log(entries.length);
+var items = ['Ruler','Ball Pen','Pensil','Calculator','Notebook'];
+console.log('Office items to order: ' + items.length);
