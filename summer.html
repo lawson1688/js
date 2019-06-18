@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello</title>
+        <script type="text/javascript">
+         var obj = {
+            outerFunction: function(){
+                var self = this;  //this refers to the current context in javascript, assign this to self to retain the original obj context.
+           		//alert(this == obj);
+           		//alert(self == obj);
+
+           		function innerFunction() {
+				   //alert (this==obj);  //this no longer refers to  the original obj
+				   //alert(self == obj);
+            	}
+            	return innerFunction;
+            }
+         };
+
+		 var inner = obj.outerFunction();
+		 inner();
+
+
+        </script>
+
+        <script type='text/javascript'>
+			//alert ("hello");
+			//alert(window.screenLeft + ', ' + window.screenTop);
+			//alert(window.innerWidth + ', ' + window.outerWidth); //(outerWidth - innerWidth)/2 = window frame width
+
+			//alert(location.href);
+			//alert(location.host);
+			//alert(location.port);
+			//alert(location.protocol);
+			//location.assign('www.yahoo.com'); //file system will fail
+
+			//var el = document.getElementById('firsDiv');
+			//alert(el);
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Winter Time</h1>
+        <div id='firstDiv' class='special'>Your Favorites
+        	<p>I love snow ! </p>
+        	<p>I love hot summer ! </p>
+        	<p>I love hiking ! </p>
+        	<p>I love to ski ! </p>
+
+		</div>
+
+		 <script type='text/javascript'>
+			var el = document.getElementById('firsDiv');
+			alert(el);
+
+        </script>
+    </body>
+</html>
